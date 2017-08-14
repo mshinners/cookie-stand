@@ -1,19 +1,32 @@
+"usestrict";
+
 
 var cookieStand = {
   location: 'firstPike',
   minHourlyCust:  23,
   maxHourlyCust: 65,
-  avgCookiesPerSale: 6.3,
   avgDailyCustomersHr: function() {
-  return Math.floor(Math.random() * (this.maxHourlyCust - this.minHourlyCust) + this.minHourlyCust)
+    return Math.floor(Math.random() * (this.maxHourlyCust - this.minHourlyCust) + this.minHourlyCust);
   },
-}
+  avgCookiesPerSale: 6.3,
+  hourlyCookiesSold: [],
+  hourlyCookiesSoldRate: function() {
+    for (var i = 0; i < 14; i++) {
+      var product = this.avgCookiesPerSale * this.avgDailyCustomersHr();
+      this.hourlyCookiesSold.push(product);
+    }
+  }
+};
+
 
 var cookieStand = {
   location: 'SeaTacAirport',
   minHourlyCust:  3,
   maxHourlyCust: 24,
   avgCookiesPerSale: 1.2,
+  avgDailyCustomersHr: function() {
+  return Math.floor(Math.random() * (this.maxHourlyCust - this.minHourlyCust) + this.minHourlyCust)
+  },
 }
 
 var cookieStand = {
@@ -21,6 +34,9 @@ var cookieStand = {
   minHourlyCust:  11,
   maxHourlyCust: 38,
   avgCookiesPerSale: 3.7,
+  avgDailyCustomersHr: function() {
+  return Math.floor(Math.random() * (this.maxHourlyCust - this.minHourlyCust) + this.minHourlyCust)
+  },
 }
 
 var cookieStand = {
@@ -28,6 +44,9 @@ var cookieStand = {
   minHourlyCust:  20,
   maxHourlyCust: 38,
   avgCookiesPerSale: 2.3,
+  avgDailyCustomersHr: function() {
+  return Math.floor(Math.random() * (this.maxHourlyCust - this.minHourlyCust) + this.minHourlyCust)
+  },
 }
 
 var cookieStand = {
@@ -35,6 +54,9 @@ var cookieStand = {
   minHourlyCust:  2,
   maxHourlyCust: 16,
   avgCookiesPerSale: 4.6,
+  avgDailyCustomersHr: function() {
+  return Math.floor(Math.random() * (this.maxHourlyCust - this.minHourlyCust) + this.minHourlyCust)
+  },
 }
 
 
