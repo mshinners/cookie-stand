@@ -4,7 +4,9 @@ var cookieStand = {
   minHourlyCust:  23,
   maxHourlyCust: 65,
   avgCookiesPerSale: 6.3,
-
+  avgDailyCustomersHr: function() {
+  return Math.floor(Math.random() * (this.maxHourlyCust - this.minHourlyCust) + this.minHourlyCust)
+  },
 }
 
 var cookieStand = {
@@ -35,7 +37,6 @@ var cookieStand = {
   avgCookiesPerSale: 4.6,
 }
 
-var avgDaily Math.floor(Math.random() * (maxHourlyCust - minHourlyCust) + minHourlyCust)
 
 
 First, create a separate JS object literal (no constructor functions... yet) for each shop location that does the following:
