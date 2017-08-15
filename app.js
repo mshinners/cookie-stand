@@ -48,7 +48,7 @@ var CapitolHill = new CookieStore('Capitol Hill', 20, 38, 2.3);
 var alki = new CookieStore('Alki',2, 16, 4.6);
 
 for (var i = 0; i < storeLocations.length; i++) {
-  storeLocations[i].hourlyCookiesSoldRate();
+  // storeLocations[i].hourlyCookiesSoldRate();
   storeLocations[i].goToSales();
 }
 
