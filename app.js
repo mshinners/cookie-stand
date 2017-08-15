@@ -90,23 +90,12 @@ var cookieStand = {
 };
 var hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm'];
 
-var stores = document.getElementById('storeLocation');
+var stores = document.getElementById('storeList');
 stores.textContent = cookieStand.location;
 
 cookieStand.hourlyCookiesSoldRate();
-for (var i = 0; i < stores.length; i++) {
-  var newLi = document.createElement('Li');
-  newLi.innerText = hours + ': ' + hourlyCookiesSold + ' cookies sold.';
+for (var i = 0; i < hours.length; i++) {
+  var newLi = document.createElement('li');
+  newLi.innerText = hours[i] + ': ' + cookieStand.hourlyCookiesSold[i] + ' cookies sold.';
+  storeList.appendChild(newLi);
 }
-
-//
-// var cookieCount = document.getElementById('listOfCookiesPerHour');
-// stores.textContent = cookieStand.hourlyCookiesSold;
-//
-// //
-//
-//   for (var i = 0; i < array.length; i++)
-//   {
-//     document.'HOUR' + ":" + cookieStand.location.hourlyCookiesSold + " cookies."
-// };
-// getElementById('')
