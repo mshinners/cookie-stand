@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+
+}
+
+body  {
+background-color: silver;
+}
+
+h1  {
+background-color: salmon;
+}
+
+img {
+
+}
+
+p {
+  background-color: salmon;
+}
+
+h2  {
+  background-color: salmon;
+}
+
+ul  {
+  background-color: salmon;
+}
+
+li  {
+  background-color: salmon;
+}
+
+aside {
+  background-color: salmon;
+}
+
+aside.p {
+  background-color: salmon;
+}
