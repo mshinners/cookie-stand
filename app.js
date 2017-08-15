@@ -1,4 +1,4 @@
-'use.strict';
+'use strict';
 
 //Store #1 Object begins
 var cookieStand1 = {
