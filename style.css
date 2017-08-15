@@ -1,14 +1,16 @@
 * {
   box-sizing: border-box;
-
+  /*font: helvetica, 18px, silver;*/
 }
 
 body  {
-background-color: silver;
+  background-color: silver;
+  font: helvetica, 18px, silver;
 }
 
 h1  {
-background-color: salmon;
+  background-color: salmon;
+  font-family: 'Pacifico', cursive;
 }
 
 img {
@@ -17,24 +19,34 @@ img {
 
 p {
   background-color: salmon;
+  font: helvetica, 18px, silver  ;
 }
 
 h2  {
   background-color: salmon;
+  font: helvetica, 18px, silver;
 }
 
 ul  {
   background-color: salmon;
+  border: thin, solid, black;
 }
 
 li  {
   background-color: salmon;
+
 }
 
 aside {
   background-color: salmon;
+  border: thin, solid, black;
 }
 
 aside.p {
   background-color: salmon;
+}
+
+footer  {
+  background-color: salmon;
+  border: thin, solid, black;
 }
