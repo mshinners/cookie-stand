@@ -27,6 +27,10 @@ for (var i = 0; i < hours.length; i++) {
   newLi.innerText = hours[i] + ': ' + cookieStand1.hourlyCookiesSold[i] + ' cookies sold.';
   storeList1.appendChild(newLi);
 }
+var Totals1 = 0;
+for (var i = 0; i < cookieStand1.hourlyCookiesSold.length; i++) {
+  Totals1 = Totals1 + cookieStand1.hourlyCookiesSold[i];
+}
 
 var cookieStand2 = {
   location: 'SeaTacAirport',
@@ -143,3 +147,7 @@ for (var i = 0; i < hours.length; i++) {
   newLi.innerText = hours[i] + ': ' + cookieStand5.hourlyCookiesSold[i] + ' cookies sold.';
   storeList5.appendChild(newLi);
 }
+function totalCookies5() {
+  sum(cookieStand5.hourlyCookiesSold[i]);
+  return totalCookies5;
+};
