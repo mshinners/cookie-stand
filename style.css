@@ -16,6 +16,20 @@ h1  {
 img {
 
 }
+section {
+  border: thin, solid, black;
+  border-collapse: collapse;
+}
+
+table tr{
+      border: thin, solid, black;
+        border-collapse: collapse;
+}
+
+tr {
+  border: thin, solid, black;
+
+}
 
 p {
   background-color: salmon;
