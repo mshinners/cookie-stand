@@ -2,6 +2,7 @@
 
 var hoursOfOperation = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 var storeLocations = [];
+var storeHoursArray = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,];
 
 function CookieStore(location, minHourlyCust, maxHourlyCust, avgCookiesPerSale) {
   this.location = location;
@@ -18,6 +19,7 @@ function CookieStore(location, minHourlyCust, maxHourlyCust, avgCookiesPerSale) 
       this.hourlyCookiesSold.push(Math.round(product));
     }
   },
+  // The data being fed to the Body of the table
   this.render = function() {
     this.hourlyCookiesSoldRate();
     var newTableData = document.getElementsByTagName('table')[0];
@@ -30,23 +32,24 @@ function CookieStore(location, minHourlyCust, maxHourlyCust, avgCookiesPerSale) 
       var hourlySales = document.createElement('td');
       hourlySales.innerText = this.hourlyCookiesSold[i];
       row.appendChild(hourlySales);
+        //Trying to create hourly sub-totals
+    }
+  };
+  this.hourlySubTotal = function() {
+    this.hourlyCookiesSold();
+    var subTotalRow = document.createElement('tr');
+    table.appendChild(subTotalRow);
+    for (var i = 0; i < this.hourlyCookiesSold.length; i++) {
+      console.log(this.hourlyCookiesSold[i] = storeHoursArray[i]);
+      //end of sub-total work section
     };
     var totalHead = document.createElement('SalesReport');
     totalHead.innerText = ('');
     row.appendChild(totalHead);
   };
-
-  // var Totals1 = 0;
-  // for (var i = 0; i < this.hourlyCookiesSold.length; i++) {
-  //   Totals1 = Totals1 + this.hourlyCookiesSold[i];
-  // }
-
   storeLocations.push(this);
-
-  // for (var i = 0; i < storeLocations.length; i++) {
-  //   storeLocations[i].SalesReport();
-  // }
 }
+
 //Table Header
 function tableHeader() {
   var headerTop = document.getElementById('tableArea');
