@@ -1,7 +1,10 @@
 'use strict';
+
+//Global Variables
 var hoursOfOperation = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 var storeLocations = [];
-// var storeHoursArray = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,];
+
+//CookieStore Constructor Function
 function CookieStore(location, minHourlyCust, maxHourlyCust, avgCookiesPerSale) {
   this.location = location;
   this.minHourlyCust = minHourlyCust;
@@ -39,13 +42,13 @@ function CookieStore(location, minHourlyCust, maxHourlyCust, avgCookiesPerSale) 
   };
   storeLocations.push(this);
 }
-//Table Header
+//End of Constructor function
+
+//Table Header Function
 function tableHeader() {
-  var headerTop = document.getElementById('tableArea');
-  var tableTop = document.createElement('table');
-  headerTop.appendChild(tableTop);
+  var headerTop = document.getElementById('SalesReport');
   var row = document.createElement('tr');
-  tableTop.appendChild(row);
+  headerTop.appendChild(row);
   var tableData = document.createElement('th');
   row.appendChild(tableData);
   for (var i = 0; i < hoursOfOperation.length; i++) {
@@ -57,14 +60,35 @@ function tableHeader() {
   totalHead.innerText = ('Daily Location Total');
   row.appendChild(totalHead);
 };
-function tableFooter() {
-// function to throw collected data from above into 'tr'
+//Spot for Table Footer
+var tableFooter = function() {
+  var newTableData = document.getElementById('SalesReport');
+  var row = document.createElement('tr');
+  var tableData = document.createElement('th');
+  tableData.innerText = ('TOTALS');
+  row.appendChild(tableData);
+  newTableData.appendChild(row);
+  for (var i = 0; i < hoursOfOperation.length; i++) {
+    var total = 0;
+    for (var j = 0; j < storeLocations.length; j++) {
+      total += storeLocations[j].hourlyCookiesSold[i];
+    }
+    console.log(total);
+    var tableData = document.createElement('th');
+    tableData.innerText = total;
+    row.appendChild(tableData);
+  }
 };
+
+// function to throw collected data from above into 'tr'
+
 var firstPike = new CookieStore('1st & Pike', 23, 65, 6.3);
 var seaTacAirport = new CookieStore('SeaTac Airport', 3, 24, 1.2);
 var seattleCenter = new CookieStore('Seattle Center', 11, 38, 3.7);
 var capitolHill = new CookieStore('Capitol Hill', 20, 38, 2.3);
 var alki = new CookieStore('Alki',2, 16, 4.6);
+
+//Call all my functions
 tableHeader();
 firstPike.render();
 seaTacAirport.render();
@@ -72,45 +96,24 @@ seattleCenter.render();
 capitolHill.render();
 alki.render();
 tableFooter();
-
+//
+//
+//
+//
+//
+//
+//
+//
 //Form Stuff - Events
 function Post(newStore, newMinCust, newMaxCust, newAvgCookieSales){
   this.newStore = newStore;
   this.newMinCust = newMinCust;
   this.newMaxCust = newMaxCust;
   this.newAvgCookieSales = newAvgCookieSales;
-
   this.renderToHTML = function(){
     // select the body
     var body = document.getElementsByTagName('body')[0];
 
-    // create the article element and give it a class and attach to the body.
-    var postArticle = document.createElement('article');
-    // postArticle.setAttribute('class', 'post');
-    // accomplishes the same as below
-    postArticle.className = 'post';
-    body.appendChild(postArticle);
-    // var postArticle = createAndAppend('article', 'post', '', body);
-
-    // create the title and append it to the article
-    var h2 = document.createElement('h2');
-    h2.innerText = this.title;
-    postArticle.appendChild(h2);
-    // createAndAppend('h2', '', this.title, postArticle);
-
-    // create the author_date p-tag and append it to the article
-    var authorDate = document.createElement('p');
-    authorDate.className = 'author_date';
-    authorDate.innerText = 'By ' + this.author + ' on ' + this.date;
-    postArticle.appendChild(authorDate);
-    // createAndAppend('p', 'author_date', 'By ' + this.author + ' on ' + this.date, postArticle);
-
-    // create the body p-tag and append it to the article
-    var postBody = document.createElement('p');
-    postBody.className = 'post-body';
-    postBody.innerText = this.body;
-    postArticle.appendChild(postBody);
-    // createAndAppend('p', 'post-body', this.body, postArticle);
   };
   function createAndAppend(toCreate, theClass, theContent, theParent){
     var theElement = document.createElement(toCreate);
@@ -123,5 +126,16 @@ function Post(newStore, newMinCust, newMaxCust, newAvgCookieSales){
     theParent.appendChild(theElement);
     return theElement;
   }
-
 }
+function addNewStore(event){
+  event.preventDefault();
+  var post = new Post();
+  post.newStore = form.elements['newStore'].value;
+  post.newMinCust = parseInt(form.elements['newMinCust'].value);
+  post.newMaxCust = parseInt(form.elements['newMaxCust'].value);
+  post.newAvgCookieSales = parseFloat(form.elements['newAvgCookieSales'].value);
+  addNewStore.renderToHTML();
+  form.reset();
+}
+var form = document.getElementById('theForm');
+form.addEventListener('submit', addNewStore);
