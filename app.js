@@ -2,7 +2,7 @@
 
 var hoursOfOperation = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 var storeLocations = [];
-var storeHoursArray = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,];
+// var storeHoursArray = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,];
 
 function CookieStore(location, minHourlyCust, maxHourlyCust, avgCookiesPerSale) {
   this.location = location;
@@ -38,32 +38,9 @@ function CookieStore(location, minHourlyCust, maxHourlyCust, avgCookiesPerSale) 
     var dailySales = document.createElement('td');
     dailySales.innerText = this.dailyStoreTotals;
     row.appendChild(dailySales);
-
-    // hourlySales.innerText = this.dailyStoreTotals[i];
-    // row.appendChild(hourlySales);
-    // for (var j = 0; j < this.dailyStoreTotals.length; i++) {
-    //   var dailySales = document.createElement('td');
-    //   dailySales.innerText = this.dailyStoreTotals[j];
-    //   row.appendChild(hourlySales);
-    //   console.log(dailySales);
-    // }
   };
-  //Trying to create hourly sub-totals
-  // this.hourlySubTotal = function() {
-  // //  this.hourlyCookiesSold();
-  //   var subTotalRow = document.createElement('tr');
-  //   table.appendChild(subTotalRow);
-  //   for (var i = 0; i < this.hourlyCookiesSold.length; i++) {
-  //     console.log(this.hourlyCookiesSold[i] = storeHoursArray[i]);
-  //     //end of sub-total work section
-  //   };
-  //   var totalHead = document.createElement('SalesReport');
-  //   totalHead.innerText = ('');
-  //   row.appendChild(totalHead);
-  // };
   storeLocations.push(this);
 }
-
 //Table Header
 function tableHeader() {
   var headerTop = document.getElementById('tableArea');
@@ -82,19 +59,9 @@ function tableHeader() {
   totalHead.innerText = ('Daily Location Total');
   row.appendChild(totalHead);
 };
-
 function tableFooter() {
-  var table = document.getElementById('SalesReport');
-  var row = document.createElement('tfoot');
-  table.appendChild(row);
-  for (var i = 0; i < storeLocations.length; i++) {
-    for (var j = 0; j < storeLocations[i].hourlyCookiesSold.length;j++) {
-      console.log(storeLocations[i].hourlyCookiesSold[j]);
-
-    }
-  }
-}
-
+// function to throw collected data from above into 'tr'
+};
 var firstPike = new CookieStore('1st & Pike', 23, 65, 6.3);
 var seaTacAirport = new CookieStore('SeaTac Airport', 3, 24, 1.2);
 var seattleCenter = new CookieStore('Seattle Center', 11, 38, 3.7);
