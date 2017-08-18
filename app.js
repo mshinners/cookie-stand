@@ -43,7 +43,6 @@ function CookieStore(location, minHourlyCust, maxHourlyCust, avgCookiesPerSale) 
   storeLocations.push(this);
 }
 //End of Constructor function
-
 //Table Header Function
 function tableHeader() {
   var headerTop = document.getElementById('SalesReport');
@@ -73,21 +72,17 @@ var tableFooter = function() {
     for (var j = 0; j < storeLocations.length; j++) {
       total += storeLocations[j].hourlyCookiesSold[i];
     }
-    console.log(total);
     var tableData = document.createElement('th');
     tableData.innerText = total;
     row.appendChild(tableData);
   }
 };
-
 // function to throw collected data from above into 'tr'
-
 var firstPike = new CookieStore('1st & Pike', 23, 65, 6.3);
 var seaTacAirport = new CookieStore('SeaTac Airport', 3, 24, 1.2);
 var seattleCenter = new CookieStore('Seattle Center', 11, 38, 3.7);
 var capitolHill = new CookieStore('Capitol Hill', 20, 38, 2.3);
 var alki = new CookieStore('Alki',2, 16, 4.6);
-
 //Call all my functions
 tableHeader();
 firstPike.render();
@@ -96,12 +91,6 @@ seattleCenter.render();
 capitolHill.render();
 alki.render();
 tableFooter();
-//
-//
-//
-//
-//
-//
 //
 //
 //Form Stuff - Events
@@ -113,7 +102,6 @@ function Post(newStore, newMinCust, newMaxCust, newAvgCookieSales){
   this.renderToHTML = function(){
     // select the body
     var body = document.getElementsByTagName('body')[0];
-
   };
   function createAndAppend(toCreate, theClass, theContent, theParent){
     var theElement = document.createElement(toCreate);
@@ -124,17 +112,18 @@ function Post(newStore, newMinCust, newMaxCust, newAvgCookieSales){
       theElement.innerText = theContent;
     }
     theParent.appendChild(theElement);
+    storeLocations.push(this);
     return theElement;
   }
 }
 function addNewStore(event){
   event.preventDefault();
-  var post = new Post();
-  post.newStore = form.elements['newStore'].value;
-  post.newMinCust = parseInt(form.elements['newMinCust'].value);
-  post.newMaxCust = parseInt(form.elements['newMaxCust'].value);
-  post.newAvgCookieSales = parseFloat(form.elements['newAvgCookieSales'].value);
-  addNewStore.renderToHTML();
+  var newStore = form.elements['newStore'].value;
+  var newMinCust = parseInt(form.elements['newMinCust'].value);
+  var newMaxCust = parseInt(form.elements['newMaxCust'].value);
+  var newAvgCookieSales = parseFloat(form.elements['newAvgCookieSales'].value);
+  var newCookieStore = new CookieStore(newStore, newMinCust, newMaxCust, newAvgCookieSales);
+  newCookieStore.render();
   form.reset();
 }
 var form = document.getElementById('theForm');
