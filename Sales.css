@@ -6,26 +6,26 @@ table {
 }
 
 .SalesReport {
-  border: 2px solid black;
+  border: 2 solid black;
   background-color: gray;
 }
 
 tr {
-  border: 2px solid black;
+  border: 2 solid black;
   background-color: gray;
 }
 
 .tableArea {
-  border: 2px solid black;
+  border: 2 solid black;
   background-color: gray;
 }
 
 td {
-  border: 2px solid black;
+  border: 2 solid black;
   background-color: gray;
 }
 
 th {
-  border: 2px solid black;
+  border: 2 solid black;
   background-color: gray;
 }
