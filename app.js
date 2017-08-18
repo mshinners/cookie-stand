@@ -63,6 +63,7 @@ function tableHeader() {
 var tableFooter = function() {
   var newTableData = document.getElementById('SalesReport');
   var row = document.createElement('tr');
+  row.id = 'footer';
   var tableData = document.createElement('th');
   tableData.innerText = ('TOTALS');
   row.appendChild(tableData);
@@ -118,12 +119,16 @@ function Post(newStore, newMinCust, newMaxCust, newAvgCookieSales){
 }
 function addNewStore(event){
   event.preventDefault();
+  var salesReport = document.getElementById('SalesReport');
   var newStore = form.elements['newStore'].value;
   var newMinCust = parseInt(form.elements['newMinCust'].value);
   var newMaxCust = parseInt(form.elements['newMaxCust'].value);
   var newAvgCookieSales = parseFloat(form.elements['newAvgCookieSales'].value);
   var newCookieStore = new CookieStore(newStore, newMinCust, newMaxCust, newAvgCookieSales);
+  salesReport.removeChild(footer);
   newCookieStore.render();
+  tableFooter();
+
   form.reset();
 }
 var form = document.getElementById('theForm');
