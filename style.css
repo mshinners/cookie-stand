@@ -15,9 +15,11 @@ h1  {
 }
 
 img {
+float: left;
 
 }
 section {
+background-color: rgb(255, 154, 134);
 
 
 }
@@ -27,7 +29,7 @@ table tr{
 }
 
 tr {
-
+list-style-type:
 
 }
 

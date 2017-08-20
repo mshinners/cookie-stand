@@ -59,13 +59,15 @@ function tableHeader() {
   totalHead.innerText = ('Daily Location Total');
   row.appendChild(totalHead);
 };
-//Spot for Table Footer
+//Table Footer
 var tableFooter = function() {
   var newTableData = document.getElementById('SalesReport');
   var row = document.createElement('tr');
   row.id = 'footer';
   var tableData = document.createElement('th');
   tableData.innerText = ('TOTALS');
+  var grandTotalCell = document.createElement('tr');
+  var grandTotal = 0;
   row.appendChild(tableData);
   newTableData.appendChild(row);
   for (var i = 0; i < hoursOfOperation.length; i++) {
@@ -76,6 +78,9 @@ var tableFooter = function() {
     var tableData = document.createElement('th');
     tableData.innerText = total;
     row.appendChild(tableData);
+    grandTotal += total;
+    grandTotalCell.innerText = total;
+    tableFooter.appendChild(grandTotalCell);
   }
 };
 // function to throw collected data from above into 'tr'
