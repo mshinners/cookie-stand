@@ -21,27 +21,52 @@ h1  {
   width: 100%;
   height: 200px;
   text-align: center;
-  padding-top: 117px;
-  padding-right: 69px;
+  padding-top: 180px;
+  padding-right: 50px;
   position: absolute;
   z-index: 11;
-
-
 }
 
 #logo {
 position: relative;
+width: 100%;
 /*margin-left: 190px;*/
 background-color: #577BCC;
 padding-left: 150px;
 padding-right: 150px;
 padding-bottom: 10px;
 padding-top: 10px;
-
 z-index: 10;
-
-
 }
+
+#navBar {
+  overflow: hidden;
+  background-color: #FF9A86;
+  margin: 0;
+  padding-left: 0;
+}
+
+#navBar li{
+  float: left;
+}
+
+a {
+  display: block;
+  color: #DDFFA0;
+  font-size: 2.5em;
+  font-family: sans-serif;
+  text-align: center;
+  border-style: solid;
+  border-width: 1px 4px 4px 1px;
+  padding: 14px 16px;
+  background-color: #577BCC;
+  text-decoration: none;
+}
+a:hover {color: #FF9A86;}
+
+
+
+
 section {
 
 
@@ -62,10 +87,12 @@ p {
   position: relative;
 }
 
-h2  {
+.article  {
   /*font: Verdana, 18px;*/
   color: #DDFFA0;
   position: relative;
+  width: 30%;
+  background-color: #FF9A86;
 }
 
 ul  {
@@ -75,16 +102,27 @@ ul  {
 li  {
 
 }
+#chinook {
+  width: 100%;
+}
+#fourFish {
+  width: 100%;
+}
 
 aside {
-
+  float: right;
+  margin-right: 20px;
 }
 
 aside.p {
+  position: relative;
+  float: right;
+  width: 25%;
+  background-color: #FF9A86;
 }
 
 footer  {
-
+text-align: center;
 }
 .color {
 background-color: #B25D4C;
