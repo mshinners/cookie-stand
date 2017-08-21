@@ -4,16 +4,12 @@
   color: #DDFFA0;
   margin: 0;
   padding-left: 0;
-
 }
-
 body  {
   background-color: #B25D4C;
   font-family: Verdana, sans-serif, 18px;
   color: #DDFFA0;
-
 }
-
 h1  {
   font-family: 'Pacifico', cursive;
   color: #DDFFA0;
@@ -29,29 +25,25 @@ h1  {
 h2 {
   text-align: center;
 }
-#logo {
-position: relative;
-width: 100%;
-/*margin-left: 190px;*/
-background-color: #577BCC;
-padding-left: 150px;
-padding-right: 150px;
-padding-bottom: 10px;
-padding-top: 10px;
-z-index: 10;
+  #logo {
+  position: relative;
+  width: 100%;
+  background-color: #577BCC;
+  padding-left: 150px;
+  padding-right: 150px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  z-index: 10;
 }
-
 #navBar {
   overflow: hidden;
   background-color: #FF9A86;
   margin: 0;
   padding-left: 0;
 }
-
 #navBar li{
   float: left;
 }
-
 a {
   display: block;
   color: #DDFFA0;
@@ -65,26 +57,15 @@ a {
   text-decoration: none;
 }
 a:hover {color: #FF9A86;}
-
-section {
-
-}
-table tr{
-
-}
-
 tr {
-list-style-type:
-
+  list-style-type:
 }
-
 p {
   font: Verdana, 18px;
   color: #DDFFA0;
   position: relative;
   padding: 3px;
 }
-
 .article  {
   font: Verdana, 24px;
   color: #DDFFA0;
@@ -92,14 +73,11 @@ p {
   width: 30%;
   background-color: #FF9A86;
   margin: 30px;
-
 }
-
 #theForm  {
   background-color: #FF9A86;
   color: gray;
 }
-
 #theFormTable {
   background-color: #FF9A86;
   color: gray;
@@ -155,23 +133,21 @@ aside {
   float: right;
   margin-right: 20px;
 }
-
 aside.p {
   position: relative;
   float: right;
   width: 25%;
   background-color: #FF9A86;
 }
-
 footer  {
 text-align: center;
 margin-top: 80%;
 }
-.color {
+/*
+.colorPallet {
 background-color: #B25D4C;
 background-color: #FF9A86;
 background-color: #DDFFA0;
 background-color: #577BCC;
 background-color: #5572B2;
-
-}
+}*/
