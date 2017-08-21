@@ -119,35 +119,21 @@ p {
   position: relative;
   margin: 30px;
   float: left;
+  /*width: 100%;*/
 }
 #family {
-  width: 300px;
+  position: relative;
+  width: 100%;
+  margin-right: 0px;
   float: left;
 }
-#location {
+#locations {
   position: relative;
   margin: 30px;
+  margin-right: 0px;
   float: left;
-}
-aside {
-  float: right;
-  margin-right: 20px;
-}
-aside.p {
-  position: relative;
-  float: right;
-  width: 25%;
-  background-color: #FF9A86;
 }
 footer  {
 text-align: center;
 margin-top: 80%;
 }
-/*
-.colorPallet {
-background-color: #B25D4C;
-background-color: #FF9A86;
-background-color: #DDFFA0;
-background-color: #577BCC;
-background-color: #5572B2;
-}*/
