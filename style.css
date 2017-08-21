@@ -64,14 +64,9 @@ a {
 }
 a:hover {color: #FF9A86;}
 
-
-
-
 section {
 
-
 }
-
 table tr{
 
 }
@@ -82,31 +77,70 @@ list-style-type:
 }
 
 p {
-  /*font: Verdana, 18px;*/
+  font: Verdana, 18px;
   color: #DDFFA0;
   position: relative;
+  padding: 3px;
 }
 
 .article  {
-  /*font: Verdana, 18px;*/
+  font: Verdana, 24px;
   color: #DDFFA0;
   position: relative;
   width: 30%;
   background-color: #FF9A86;
-}
-
-ul  {
+  margin: 30px;
 
 }
 
-li  {
+#theForm  {
+  background-color: #FF9A86;
+  color: gray;
+}
 
+#theFormTable {
+  background-color: #FF9A86;
+  color: gray;
+  margin-left: 25%;
 }
 #chinook {
   width: 100%;
 }
 #fourFish {
   width: 100%;
+}
+#shirt {
+  width: 60%;
+  float: left;
+}
+#cutter {
+  width: 40%;
+  float: right;
+}
+#enjoy {
+  position: relative;
+  margin: 30px;
+  margin-right: 0px;
+  float: left;
+}
+#story {
+  position: relative;
+  margin: 30px;
+  margin-right: 0px;
+  float: left;
+}
+#gear {
+  position: relative;
+  margin: 30px;
+  float: left;
+}
+#menu {
+  position: relative;
+  margin-left: 20%;
+  margin-top: 100%;
+}
+#family {
+  width: 120px;
 }
 
 aside {

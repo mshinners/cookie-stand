@@ -78,12 +78,9 @@ var tableFooter = function() {
     var tableData = document.createElement('th');
     tableData.innerText = total;
     row.appendChild(tableData);
-    grandTotal += total;
-    grandTotalCell.innerText = total;
-    tableFooter.appendChild(grandTotalCell);
   }
 };
-// function to throw collected data from above into 'tr'
+// function to enter collected data from above into 'tr'
 var firstPike = new CookieStore('1st & Pike', 23, 65, 6.3);
 var seaTacAirport = new CookieStore('SeaTac Airport', 3, 24, 1.2);
 var seattleCenter = new CookieStore('Seattle Center', 11, 38, 3.7);
@@ -97,8 +94,6 @@ seattleCenter.render();
 capitolHill.render();
 alki.render();
 tableFooter();
-//
-//
 //Form Stuff - Events
 function Post(newStore, newMinCust, newMaxCust, newAvgCookieSales){
   this.newStore = newStore;
