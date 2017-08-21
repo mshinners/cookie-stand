@@ -1,4 +1,41 @@
+* {
+  box-sizing: border-box;
+  font: Verdana, 18px;
+  color: #DDFFA0;
+  margin: 0;
+  padding-left: 0;
 
+}
+
+body  {
+  background-color: #B25D4C;
+  font-family: Verdana, sans-serif, 18px;
+  color: #DDFFA0;
+}
+h1  {
+  font-family: 'Pacifico', cursive;
+  color: #DDFFA0;
+  font-size: 2.5em;
+  width: 100%;
+  height: 200px;
+  text-align: center;
+  padding-top: 180px;
+  padding-right: 50px;
+  position: absolute;
+  z-index: 11;
+}
+
+#logo {
+position: relative;
+width: 100%;
+/*margin-left: 190px;*/
+background-color: #577BCC;
+padding-left: 150px;
+padding-right: 150px;
+padding-bottom: 10px;
+padding-top: 10px;
+z-index: 10;
+}
 
 table {
   border: 2px solid black;
@@ -27,5 +64,10 @@ td {
 
 th {
   border: 2 solid black;
-  background-color: gray;
+  background-color: #5572B2;
+}
+#SalesReport {
+  background-color: #FF9A86;
+  margin-left: 25%;
+
 }

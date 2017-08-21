@@ -1,68 +1,139 @@
 * {
   box-sizing: border-box;
-  font: helvetica, 18px, silver;
+  font: Verdana, 18px;
+  color: #DDFFA0;
+  margin: 0;
+  padding-left: 0;
 }
-
 body  {
-  background-color: silver;
-  font: helvetica, 18px, silver;
+  background-color: #B25D4C;
+  font-family: Verdana, sans-serif, 18px;
+  color: #DDFFA0;
 }
-
 h1  {
-  background-color: salmon;
-  border: thin, solid, black;
   font-family: 'Pacifico', cursive;
+  color: #DDFFA0;
+  font-size: 2.5em;
+  width: 100%;
+  height: 200px;
+  text-align: center;
+  padding-top: 180px;
+  padding-right: 50px;
+  position: absolute;
+  z-index: 11;
 }
-
-img {
-float: left;
-
+h2 {
+  text-align: center;
 }
-section {
-background-color: rgb(255, 154, 134);
-
-
+  #logo {
+  position: relative;
+  width: 100%;
+  background-color: #577BCC;
+  padding-left: 150px;
+  padding-right: 150px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  z-index: 10;
 }
-
-table tr{
-
+#navBar {
+  overflow: hidden;
+  background-color: #FF9A86;
+  margin: 0;
+  padding-left: 0;
 }
-
+#navBar li{
+  float: left;
+}
+a {
+  display: block;
+  color: #DDFFA0;
+  font-size: 2.5em;
+  font-family: sans-serif;
+  text-align: center;
+  border-style: solid;
+  border-width: 1px 4px 4px 1px;
+  padding: 14px 16px;
+  background-color: #577BCC;
+  text-decoration: none;
+}
+a:hover {color: #FF9A86;}
 tr {
-list-style-type:
-
+  list-style-type:
 }
-
 p {
-  background-color: salmon;
-  font: helvetica, 18px, silver  ;
+  font: Verdana, 18px;
+  color: #DDFFA0;
+  position: relative;
+  padding: 3px;
 }
-
-h2  {
-  background-color: salmon;
-  font: helvetica, 18px, silver;
+.article  {
+  font: Verdana, 24px;
+  color: #DDFFA0;
+  position: relative;
+  width: 30%;
+  background-color: #FF9A86;
+  margin: 30px;
 }
-
-ul  {
-  background-color: salmon;
-
+#theForm  {
+  background-color: #FF9A86;
+  color: gray;
 }
-
-li  {
-  background-color: salmon;
-
+#theFormTable {
+  background-color: #FF9A86;
+  color: gray;
+  margin-left: 25%;
 }
-
-aside {
-  background-color: salmon;
-
+#chinook {
+  width: 100%;
 }
-
-aside.p {
-  background-color: salmon;
+#fourFish {
+  width: 100%;
 }
-
+#shirt {
+  width: 60%;
+  float: left;
+}
+#cutter {
+  width: 40%;
+  float: right;
+}
+#enjoy {
+  position: relative;
+  margin: 30px;
+  margin-right: 0px;
+  margin-bottom: 10px;
+  float: left;
+}
+#story {
+  position: relative;
+  margin: 30px;
+  margin-right: 0px;
+  float: left;
+}
+#gear {
+  position: relative;
+  margin: 30px;
+  float: left;
+}
+#menu {
+  position: relative;
+  margin: 30px;
+  float: left;
+  /*width: 100%;*/
+}
+#family {
+  position: relative;
+  width: 100%;
+  margin-right: 0px;
+  float: left;
+}
+#locations {
+  position: relative;
+  margin: 30px;
+  margin-right: 0px;
+  float: left;
+}
 footer  {
-  background-color: salmon;
-
+text-align: center;
+margin-top: 80%;
 }
